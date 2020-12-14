@@ -1,0 +1,50 @@
+{
+  "id": "4ce80c79-284a-442d-aed6-aecaa100bd0e",
+  "name": "Get List View Metadata per API Name",
+  "url": "{{_endpoint}}/services/data/v{{version}}/ui-api/list-info/<SOBJECT_API_NAME>/<LIST_VIEW_API_NAME>",
+  "description": "Returns list view metadata.",
+  "data": [],
+  "dataOptions": {
+    "raw": {
+      "language": "json"
+    }
+  },
+  "dataMode": "raw",
+  "headerData": [
+    {
+      "description": "",
+      "enabled": true,
+      "key": "Authorization",
+      "type": "text",
+      "value": "Bearer {{_accessToken}}"
+    }
+  ],
+  "method": "GET",
+  "pathVariableData": [],
+  "queryParams": [],
+  "auth": null,
+  "events": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "076c8104-49ed-41ff-9281-fd1359292263",
+        "exec": [
+          ""
+        ],
+        "type": "text/javascript"
+      }
+    }
+  ],
+  "folder": "8352c5c2-c779-4684-a003-36daa7955fd0",
+  "protocolProfileBehavior": {
+    "disableBodyPruning": true
+  },
+  "preRequestScript": null,
+  "tests": null,
+  "currentHelper": null,
+  "helperAttributes": null,
+  "collectionId": "58651f2c-c011-41d0-b34b-b5609b7d95df",
+  "rawModeData": "",
+  "headers": "Authorization: Bearer {{_accessToken}}\n",
+  "pathVariables": {}
+}

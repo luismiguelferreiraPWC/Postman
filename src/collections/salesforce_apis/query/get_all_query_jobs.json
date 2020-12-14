@@ -1,0 +1,60 @@
+{
+  "id": "f1b604bb-d251-458a-98d4-8a8ef358f17e",
+  "name": "Get All Query Jobs",
+  "url": "{{_endpoint}}/services/data/v{{version}}/jobs/query?isPkChunkingEnabled=false&jobType&concurrencyMode&queryLocator",
+  "description": null,
+  "data": null,
+  "dataOptions": null,
+  "dataMode": null,
+  "headerData": [
+    {
+      "key": "Authorization",
+      "value": "Bearer {{_accessToken}}"
+    },
+    {
+      "enabled": true,
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "method": "GET",
+  "pathVariableData": [],
+  "queryParams": [
+    {
+      "key": "isPkChunkingEnabled",
+      "value": "false",
+      "equals": true,
+      "description": "If set to true, the request only returns information about jobs where PK Chunking is enabled",
+      "enabled": true
+    },
+    {
+      "key": "jobType",
+      "value": "",
+      "equals": false,
+      "description": "BigObjectIngest Classic V2Query",
+      "enabled": true
+    },
+    {
+      "key": "concurrencyMode",
+      "value": "",
+      "equals": false,
+      "description": "serial parallel",
+      "enabled": true
+    },
+    {
+      "key": "queryLocator",
+      "value": "",
+      "equals": false,
+      "description": "use the value from the nextRecordsUrl from the previous set",
+      "enabled": true
+    }
+  ],
+  "auth": null,
+  "events": null,
+  "folder": "3fdd1653-9a88-4262-a3d6-ff93b3ef92d8",
+  "currentHelper": null,
+  "helperAttributes": null,
+  "collectionId": "58651f2c-c011-41d0-b34b-b5609b7d95df",
+  "headers": "Authorization: Bearer {{_accessToken}}\nContent-Type: application/json\n",
+  "pathVariables": {}
+}

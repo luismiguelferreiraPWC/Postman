@@ -1,0 +1,71 @@
+{
+  "id": "12e6dbcd-52e4-4c7e-a19c-935741e2fa00",
+  "name": "Web Server Flow 2",
+  "url": "{{url}}{{site}}/services/oauth2/token",
+  "description": null,
+  "data": [
+    {
+      "key": "code",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "key": "grant_type",
+      "value": "authorization_code",
+      "type": "text"
+    },
+    {
+      "key": "client_id",
+      "value": "{{clientId}}",
+      "type": "text"
+    },
+    {
+      "key": "client_secret",
+      "value": "{{clientSecret}}",
+      "type": "text"
+    },
+    {
+      "key": "redirect_uri",
+      "value": "{{redirectUrl}}",
+      "type": "text"
+    },
+    {
+      "key": "format",
+      "value": "json",
+      "type": "text"
+    }
+  ],
+  "dataOptions": null,
+  "dataMode": "params",
+  "headerData": [],
+  "method": "POST",
+  "pathVariableData": [],
+  "queryParams": [],
+  "auth": null,
+  "events": [
+    {
+      "listen": "test",
+      "script": {
+        "id": "42af4a8f-87e2-47d9-94fc-7025cb052f12",
+        "exec": [
+          "var jsonData = pm.response.json();",
+          "var id = jsonData.id.split('/');",
+          "pm.environment.set(\"_accessToken\", jsonData.access_token);",
+          "pm.environment.set(\"_refreshToken\", jsonData.refresh_token);",
+          "pm.environment.set(\"_endpoint\", jsonData.instance_url);",
+          "pm.environment.set(\"_userId\", id.pop());",
+          "pm.environment.set(\"_orgId\", id.pop());"
+        ],
+        "type": "text/javascript"
+      }
+    }
+  ],
+  "folder": "32acb1b0-3ff8-40e8-9195-7e1ed0837157",
+  "preRequestScript": null,
+  "tests": "var jsonData = pm.response.json();\nvar id = jsonData.id.split('/');\npm.environment.set(\"_accessToken\", jsonData.access_token);\npm.environment.set(\"_endpoint\", jsonData.instance_url);\npm.environment.set(\"_userId\", id.pop());\npm.environment.set(\"_orgId\", id.pop());",
+  "currentHelper": null,
+  "helperAttributes": null,
+  "collectionId": "58651f2c-c011-41d0-b34b-b5609b7d95df",
+  "headers": "",
+  "pathVariables": {}
+}

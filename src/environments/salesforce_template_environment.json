@@ -1,0 +1,56 @@
+{
+  "id": "c9953dc8-53ef-49f1-98ec-8481c8f3ac54",
+  "name": "Salesforce Template Environment",
+  "values": [
+    {
+      "key": "url",
+      "value": "https://test.salesforce.com",
+      "enabled": true
+    },
+    {
+      "key": "version",
+      "value": "50.0",
+      "enabled": true
+    },
+    {
+      "key": "username",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "password",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "secretToken",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "clientId",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "clientSecret",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "redirectUrl",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "initAccessToken",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "site",
+      "value": "",
+      "enabled": true
+    }
+  ]
+}

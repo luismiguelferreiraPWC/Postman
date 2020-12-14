@@ -1,0 +1,46 @@
+{
+  "id": "812171a0-ed67-4519-9c09-78ed8ac44239",
+  "name": "Get Lookup Field Actions",
+  "url": "{{_endpoint}}/services/data/v{{version}}/ui-api/actions/lookup/<SOBJECT_API_NAMES>",
+  "description": "Get the actions on Lightning pages (FlexiPages).",
+  "data": [],
+  "dataOptions": null,
+  "dataMode": "raw",
+  "headerData": [
+    {
+      "description": "",
+      "enabled": true,
+      "key": "Authorization",
+      "type": "text",
+      "value": "Bearer {{_accessToken}}"
+    }
+  ],
+  "method": "GET",
+  "pathVariableData": [],
+  "queryParams": [],
+  "auth": null,
+  "events": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "076c8104-49ed-41ff-9281-fd1359292263",
+        "exec": [
+          ""
+        ],
+        "type": "text/javascript"
+      }
+    }
+  ],
+  "folder": "c451b8e5-6f6e-4242-9c63-fac725813b42",
+  "protocolProfileBehavior": {
+    "disableBodyPruning": true
+  },
+  "preRequestScript": null,
+  "tests": null,
+  "currentHelper": null,
+  "helperAttributes": null,
+  "collectionId": "58651f2c-c011-41d0-b34b-b5609b7d95df",
+  "rawModeData": "",
+  "headers": "Authorization: Bearer {{_accessToken}}\n",
+  "pathVariables": {}
+}
